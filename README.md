@@ -8,6 +8,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Code scaffolding
 
+Scaffold project: `ng new my-angular-app --routing --style=scss --ssr=false` to generate new project.
+
+Add material `ng add @angular/material --theme=indigo-pink --typography=true --animations=true`
+
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
