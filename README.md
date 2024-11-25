@@ -12,6 +12,15 @@ Scaffold project: `ng new my-angular-app --routing --style=scss --ssr=false` to 
 
 Add material `ng add @angular/material --theme=indigo-pink --typography=true --animations=true`
 
+Add tailwindcss:
+1. Add the package and initialize:
+    ```
+        npm install -D tailwindcss postcss postcss-scss autoprefixer
+        npx tailwindcss init
+    ```
+2. Paste 
+3. Install VSCode extension [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
