@@ -258,12 +258,264 @@ export class PropertyService {
         },
         imageUrl: `stock-photos/properties/property-10.jpg`,
       },
+      {
+        id: '11',
+        address: {
+          street: '2425 Chestnut St',
+          city: 'Atlanta',
+          state: 'GA',
+          postal: '30303',
+        },
+        askingPrice: 83000,
+        cashflowMonthlyEstimate: 240,
+        fairMarketRent: 950,
+        paymentEstimate: 380,
+        roomCounts: {
+          beds: 2,
+          baths: 1,
+        },
+        imageUrl: `stock-photos/properties/property-11.jpg`,
+      },
+      {
+        id: '12',
+        address: {
+          street: '2627 Poplar St',
+          city: 'Miami',
+          state: 'FL',
+          postal: '33101',
+        },
+        askingPrice: 100000,
+        cashflowMonthlyEstimate: 290,
+        fairMarketRent: 1150,
+        paymentEstimate: 440,
+        roomCounts: {
+          beds: 3,
+          baths: 1,
+        },
+        imageUrl: `stock-photos/properties/property-12.jpg`,
+      },
+      {
+        id: '13',
+        address: {
+          street: '2829 Willow St',
+          city: 'Houston',
+          state: 'TX',
+          postal: '77001',
+        },
+        askingPrice: 72000,
+        cashflowMonthlyEstimate: 190,
+        fairMarketRent: 870,
+        paymentEstimate: 320,
+        roomCounts: {
+          beds: 1,
+          baths: 1,
+        },
+        imageUrl: `stock-photos/properties/property-13.jpg`,
+      },
+      {
+        id: '14',
+        address: {
+          street: '3031 Fir St',
+          city: 'Nashville',
+          state: 'TN',
+          postal: '37201',
+        },
+        askingPrice: 58000,
+        cashflowMonthlyEstimate: 160,
+        fairMarketRent: 780,
+        paymentEstimate: 290,
+        roomCounts: {
+          beds: 2,
+          baths: 1.5,
+        },
+        imageUrl: `stock-photos/properties/property-14.jpg`,
+      },
+      {
+        id: '15',
+        address: {
+          street: '3233 Beech St',
+          city: 'Dallas',
+          state: 'TX',
+          postal: '75201',
+        },
+        askingPrice: 88000,
+        cashflowMonthlyEstimate: 260,
+        fairMarketRent: 1050,
+        paymentEstimate: 400,
+        roomCounts: {
+          beds: 3,
+          baths: 1.5,
+        },
+        imageUrl: `stock-photos/properties/property-15.jpg`,
+      },
+      {
+        id: '16',
+        address: {
+          street: '3435 Holly St',
+          city: 'Los Angeles',
+          state: 'CA',
+          postal: '90001',
+        },
+        askingPrice: 92000,
+        cashflowMonthlyEstimate: 280,
+        fairMarketRent: 1100,
+        paymentEstimate: 420,
+        roomCounts: {
+          beds: 2,
+          baths: 1.5,
+        },
+        imageUrl: `stock-photos/properties/property-16.jpg`,
+      },
+      {
+        id: '17',
+        address: {
+          street: '3637 Cypress St',
+          city: 'Philadelphia',
+          state: 'PA',
+          postal: '19103',
+        },
+        askingPrice: 64000,
+        cashflowMonthlyEstimate: 170,
+        fairMarketRent: 820,
+        paymentEstimate: 300,
+        roomCounts: {
+          beds: 1,
+          baths: 1,
+        },
+        imageUrl: `stock-photos/properties/property-17.jpg`,
+      },
+      {
+        id: '18',
+        address: {
+          street: '3839 Sycamore St',
+          city: 'Charlotte',
+          state: 'NC',
+          postal: '28202',
+        },
+        askingPrice: 102000,
+        cashflowMonthlyEstimate: 310,
+        fairMarketRent: 1250,
+        paymentEstimate: 470,
+        roomCounts: {
+          beds: 3,
+          baths: 1,
+        },
+        imageUrl: `stock-photos/properties/property-18.jpg`,
+      },
+      {
+        id: '19',
+        address: {
+          street: '4041 Alder St',
+          city: 'San Diego',
+          state: 'CA',
+          postal: '92101',
+        },
+        askingPrice: 86000,
+        cashflowMonthlyEstimate: 240,
+        fairMarketRent: 1020,
+        paymentEstimate: 390,
+        roomCounts: {
+          beds: 2,
+          baths: 1.5,
+        },
+        imageUrl: `stock-photos/properties/property-19.jpg`,
+      },
+      {
+        id: '20',
+        address: {
+          street: '4243 Dogwood St',
+          city: 'Indianapolis',
+          state: 'IN',
+          postal: '46204',
+        },
+        askingPrice: 73000,
+        cashflowMonthlyEstimate: 200,
+        fairMarketRent: 880,
+        paymentEstimate: 340,
+        roomCounts: {
+          beds: 1,
+          baths: 1,
+        },
+        imageUrl: `stock-photos/properties/property-20.jpg`,
+      },
+      {
+        id: '21',
+        address: {
+          street: '4445 Redwood St',
+          city: 'Baltimore',
+          state: 'MD',
+          postal: '21201',
+        },
+        askingPrice: 110000,
+        cashflowMonthlyEstimate: 320,
+        fairMarketRent: 1300,
+        paymentEstimate: 490,
+        roomCounts: {
+          beds: 3,
+          baths: 1,
+        },
+        imageUrl: `stock-photos/properties/property-21.jpg`,
+      },
+      {
+        id: '22',
+        address: {
+          street: '4647 Palm St',
+          city: 'Salt Lake City',
+          state: 'UT',
+          postal: '84101',
+        },
+        askingPrice: 77000,
+        cashflowMonthlyEstimate: 210,
+        fairMarketRent: 920,
+        paymentEstimate: 350,
+        roomCounts: {
+          beds: 2,
+          baths: 1.5,
+        },
+        imageUrl: `stock-photos/properties/property-22.jpg`,
+      },
+      {
+        id: '23',
+        address: {
+          street: '4849 Cherry St',
+          city: 'St. Louis',
+          state: 'MO',
+          postal: '63101',
+        },
+        askingPrice: 94000,
+        cashflowMonthlyEstimate: 290,
+        fairMarketRent: 1180,
+        paymentEstimate: 430,
+        roomCounts: {
+          beds: 3,
+          baths: 1.5,
+        },
+        imageUrl: `stock-photos/properties/property-23.jpg`,
+      },
+      {
+        id: '24',
+        address: {
+          street: '5051 Magnolia St',
+          city: 'Minneapolis',
+          state: 'MN',
+          postal: '55401',
+        },
+        askingPrice: 68000,
+        cashflowMonthlyEstimate: 180,
+        fairMarketRent: 860,
+        paymentEstimate: 320,
+        roomCounts: {
+          beds: 1,
+          baths: 1,
+        },
+        imageUrl: `stock-photos/properties/property-24.jpg`,
+      },
     ];
-  };
+  };  
   
   getById(id: string): Observable<PropertyModel[]> {
     console.log(`getById(${id}`);
-    const seed = [...Array(6)].map((item, index) => this.mockPropertyData()[index]);
+    const seed = [...Array(24)].map((item, index) => this.mockPropertyData()[index]);
     const filtered = seed.filter(x => x.id === id)
     console.log(`getById(${id}) seed:`, seed);
     return of(seed);
