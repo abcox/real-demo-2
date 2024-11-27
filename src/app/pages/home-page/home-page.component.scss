@@ -1,0 +1,32 @@
+:host {
+    //display: block; /* Ensure the component behaves like a block element */
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensure it expands to fill available space */
+    background-color: rgb(175, 175, 175); /* Set your desired background color */
+    //height: 100%; /* Optional: Ensure it covers the desired height */
+    //min-height: 100vh; /* Ensures the component covers at least the full height of the viewport */
+    width: 100%; /* Optional: Ensure it covers the desired width */
+}
+
+h1 {
+    padding: 16px 16px 0 16px;
+}
+
+.container {
+    display: flex;
+//    height: 100vh;
+    flex: 1; /* Ensure it expands to fill available space */
+    flex-direction: column !important;
+    //width: 100vw;
+    width: 100%;
+}
+
+app-property-list {
+    display: flex;
+    width: 98vw;
+    //flex: 1; /* Allow this component to expand within the parent's layout */
+    overflow: auto; /* Add scrolling for content that exceeds height */
+    margin-bottom: 2em;
+    margin-right: 2em;
+}

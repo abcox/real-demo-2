@@ -1,0 +1,14 @@
+//:host {
+//    display: block; /* Ensure the component behaves like a block element */
+//    background-color: lightgray; /* Set your desired background color */
+//    height: 100%; /* Optional: Ensure it covers the desired height */
+//    //min-height: 100vh; /* Ensures the component covers at least the full height of the viewport */
+//    width: 100%; /* Optional: Ensure it covers the desired width */
+//}
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensure it expands to fill available space */
+    width: 100%; /* Ensure it covers the full width */
+    overflow: hidden; /* Prevent multiple scroll bars */
+}

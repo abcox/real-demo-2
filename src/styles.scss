@@ -1,5 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'tailwind.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    //display: flex;
+    height: 100%; /* Optional: Ensure it covers the desired height */
+    //min-height: 100vh; /* Ensures the component covers at least the full height of the viewport */
+    //width: 100%;
+    overflow: hidden;
+    background-color: rgb(175, 175, 175); /* Set your desired background color */
+}
+
+body {
+    //margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+}
+
+/* Boilerplate main layout */
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensure it expands to fill available space */
+    //min-height: 100vh; /* Ensures main content covers full viewport */
+    //background-color: white; /* Optional: Overrides global background color */
+    overflow: hidden;
+}
+
+/* Styling for the root component */
+app-root {
+    display: flex;
+    display: block;
+    flex: 1; /* Ensure it expands to fill available space */
+    //height: 100%; /* Fill the entire height of the viewport */
+    overflow: hidden;
+}
+
+.content {
+    flex: 1; /* Ensures the content expands to fill available space */
+//    display: flex;
+//    flex-direction: column; /* Adjust as needed */
+//    align-items: center; /* Center-align content horizontally */
+//    justify-content: center; /* Center-align content vertically */
+//    padding: 1rem; /* Add spacing */
+    overflow-y: auto; /* Add scrolling for content that exceeds height */
+}
+
+/* Add a basic style for the router outlet */
+router-outlet {
+    display: block;
+    width: 100%;
+}
+

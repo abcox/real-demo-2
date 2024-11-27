@@ -1,0 +1,8 @@
+<mat-chip-set>
+    @for (attribute of attributes; track $index) {
+        <mat-chip (click)="toggleSelection(attribute)">
+            <!-- {{ attribute.value }} -->
+            {{ attribute[0] }}: {{ attribute[1] }}
+        </mat-chip>
+    }
+</mat-chip-set>

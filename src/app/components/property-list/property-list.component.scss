@@ -1,0 +1,15 @@
+:host {
+    display: block;
+    width: 100%;
+    flex: 1; /* Allow this component to expand within the parent's layout */
+    overflow: auto; /* Add scrolling for content that exceeds height */
+    margin-bottom: 2em;
+}
+  
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to next line */
+    gap: 16px; /* Adds spacing between cards */
+    justify-content: flex-start; /* Aligns cards to the left */
+    padding: 16px; /* Optional padding around the container */
+}
