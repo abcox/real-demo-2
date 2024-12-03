@@ -1,0 +1,73 @@
+form {
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    //justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+mat-form-field:not(fieldset mat-form-field) {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+//#region readonly formfield
+//::ng-deep mat-form-field input[readonly] {
+//    background-color: #f9f9f9 !important; /* Light gray background */
+//    cursor: default; /* Show a default cursor to avoid text-selection cursor */    
+//    pointer-events: none !important; /* Disable all interactions */
+//    border: none !important; /* Remove border */
+//    outline: none !important; /* Remove focus outline */
+//    box-shadow: none !important; /* Remove any box shadow on focus */
+//    color: #333 !important; /* Adjust text color, if needed */
+//}
+
+.highlight .mat-mdc-text-field-wrapper {
+    background-color: rgba(164,241,255,.99) !important; /* Light gray background */
+    border-radius: 4px;
+}
+mat-form-field[readonly] .mat-mdc-text-field-wrapper {
+    //background-color: rgba(164,241,255,.99) !important; /* Light gray background */
+    cursor: default; /* Show a default cursor to avoid text-selection cursor */    
+    pointer-events: none !important; /* Disable all interactions */
+    //border: none !important; /* Remove border */
+    //border-radius: 4px;
+    outline: none !important; /* Remove focus outline */
+    box-shadow: none !important; /* Remove any box shadow on focus */
+    color: #333 !important; /* Adjust text color, if needed */
+}
+mat-form-field[readonly]
+.mdc-text-field--outlined
+.mdc-notched-outline
+.mdc-notched-outline__leading {
+    //border-radius: 0;
+    border: none;
+}
+mat-form-field[readonly]
+.mdc-text-field--outlined
+.mdc-notched-outline
+.mdc-notched-outline__trailing {
+   //border-radius: 0;
+   border: none;
+}
+mat-form-field[readonly]
+.mdc-text-field--outlined
+.mdc-notched-outline
+.mdc-notched-outline__notch {
+   //border-radius: 0;
+   border: none;
+}
+//#endregion

@@ -3,9 +3,23 @@
          <img [src]="property.imageUrl">
     </div>
     <div class="detail">
-        <h2 class="text-lg font-bold">{{ property.askingPrice | currency }}</h2>
-        <!-- <h4 class="text-md">{{ property.location }}</h4> -->
+        <div class="flex justify-between">
+            <h2 class="text-lg font-bold">{{ property.askingPrice | currency }}</h2>
+            <button (click)="toggleFavorite()">
+                <mat-icon>
+                    {{ favorite ? 'favorite' : 'favorite_border' }}
+                </mat-icon>
+            </button>
+        </div>
         <app-address class="text-md" [address]="property.address"></app-address>
         <app-attribute-chip-list [attributes]="property.roomCounts"></app-attribute-chip-list>
+        <div class="flex justify-end">
+            <button mat-flat-button color="primary"
+                (click)="navigateToDetail(property)" [ngClass]="{ 'bg-gray-300': !property }">
+                Detail
+            </button><!-- optionally, can route with state:
+                [routerLink]="['/property', property.id]"
+                [state]="{ property: property }" -->
+        </div>
     </div>
 </div>

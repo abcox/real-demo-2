@@ -1,6 +1,5 @@
-import { KeyValue } from '@angular/common';
-import { computed, Injectable, signal } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { computed, Injectable, Signal, signal, WritableSignal } from '@angular/core';
+import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { delay, map, Observable, of, Subject, switchMap, tap } from 'rxjs';
 
 @Injectable({
@@ -27,14 +26,14 @@ export class PropertyService {
 
   constructor() {
     this.selectedId$.pipe(
-      tap(id => console.log(`selectedId$ id: ${id}`)),
+      //tap(id => console.log(`selectedId$ id: ${id}`)),
       tap(() => this.setLoading(true)),
       //tap(id => this.setSelectedId(id)),
       switchMap(id => this.getById(id)),
       //delay(1000),
-      //takeUntilDestroyed(),
       //map()
-      tap(results => console.log(`results:`, results))
+      //tap(results => console.log(`results:`, results)),
+      takeUntilDestroyed()
     ).subscribe(results => this.setList(results));
   }
 
@@ -511,14 +510,55 @@ export class PropertyService {
         imageUrl: `stock-photos/properties/property-24.jpg`,
       },
     ];
-  };  
+  };
+
+  // shortcut
+  get mockData(): PropertyModel[] {
+    return this.mockPropertyData();
+  }
+
+  getMockData(): Observable<PropertyModel[]> {
+    return of(this.mockData);
+  }
+
+  getMockDataAsSignal(): Signal<PropertyModel[]> {
+    return signal(this.mockData);
+  }
+
+  getMockDataAsSignalFromObservable(): Signal<PropertyModel[]> {
+    const mockData = this.mockData;
+    const mockData$ = of(mockData);
+    const mockDataSignal = toSignal(mockData$, { initialValue: [] });
+    return mockDataSignal;
+  }
   
   getById(id: string): Observable<PropertyModel[]> {
-    console.log(`getById(${id}`);
+    //console.log(`getById(${id}`);
     const seed = [...Array(24)].map((item, index) => this.mockPropertyData()[index]);
     const filtered = seed.filter(x => x.id === id)
-    console.log(`getById(${id}) seed:`, seed);
+    //console.log(`getById(${id}) seed:`, seed);
     return of(seed);
+  }
+
+  private getProperty(id: string | null): PropertyModel | undefined {
+    return this.mockPropertyData().find(x => x.id === id);
+  }
+
+  setSelectedPropertyById(id: string) {
+    const property = this.getProperty(id);
+    if (!property) {
+      console.warn(`Property not found with id ${id}`);
+      return;
+    }
+    this.setSelectedProperty(property);
+  }
+  
+  setSelectedProperty(property: PropertyModel) {
+    console.log(`setSelectedProperty:`, property);
+    this.state.update(state => ({
+      ...state,
+      selected: property
+    }));
   }
 }
 

@@ -13,7 +13,6 @@ export class AddressComponent implements OnInit {
   @Input() address?: AddressModel;
   available = false;
   ngOnInit() {
-    console.log('address:', this.address);
     this.available = this.address !== undefined &&
     this.address?.street !== undefined &&
     this.address?.city !== undefined &&

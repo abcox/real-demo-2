@@ -1,9 +1,11 @@
-<span *ngIf="available === true; else defaultTemplate">
-    <span *ngIf="address?.street">{{ address?.street }}, </span>
-    <span *ngIf="address?.city">{{ address?.city }}, </span>
-    <span *ngIf="address?.state">{{ address?.state }} </span>
-    <span *ngIf="address?.postal">{{ address?.postal }}</span>
-</span>
-<ng-template #defaultTemplate>
-    <span>Unavailable</span>
-</ng-template>
+<div>
+    <span *ngIf="available === true; else defaultTemplate">
+        <span *ngIf="address?.street">{{ address?.street }}, </span>
+        <span *ngIf="address?.city">{{ address?.city }}, </span>
+        <span *ngIf="address?.state">{{ address?.state }} </span>
+        <span *ngIf="address?.postal">{{ address?.postal }}</span>
+    </span>
+    <ng-template #defaultTemplate>
+        <span>Unavailable</span>
+    </ng-template>
+</div>

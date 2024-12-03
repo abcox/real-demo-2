@@ -34,7 +34,6 @@ export const objectToKeyValuePair2 = (data: Record<string, number>): [string, nu
 export class AttributeChipListComponent {
   //@Input() attributes: RoomCountModel | undefined;
   @Input() set attributes(value: RoomCountModel | undefined) {
-    console.log('value:', value);
     if (value) {
       this._attributes = Object.entries(value);
     } else {

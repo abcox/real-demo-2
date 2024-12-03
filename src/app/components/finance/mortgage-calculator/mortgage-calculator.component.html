@@ -1,0 +1,47 @@
+
+<div>
+    <form [formGroup]="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input matInput formControlName="price"
+                [currencyMask]="{ prefix: '$', thousands: ',', decimal: '.' }">
+        </mat-form-field>
+        <fieldset>
+            <legend>Down Payment</legend>
+            <div class="form-group">
+                <mat-form-field class="mr-3">
+                    <mat-label>Percentage</mat-label>
+                    <input matInput formControlName="downPaymentPercentage"
+                    [currencyMask]="{ precision: 2, prefix: '', suffix: '%' }">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Amount</mat-label>
+                    <input matInput formControlName="downPaymentAmount"
+                    [currencyMask]="{ prefix: '$', thousands: ',', decimal: '.' }">
+                </mat-form-field>
+            </div>
+        </fieldset>
+        <mat-form-field readonly subscriptSizing="dynamic">
+            <mat-label>CMHC insurance</mat-label>
+            <input matInput formControlName="cmhcInsurance"
+            [currencyMask]="{ prefix: '$', thousands: ',', decimal: '.' }">
+        </mat-form-field>
+        <mat-form-field class="highlight" readonly>
+            <mat-label>Total</mat-label>
+            <input matInput formControlName="total">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Amortization</mat-label>
+            <input matInput formControlName="period">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Mortgage rate</mat-label>
+            <input matInput formControlName="interest">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Mortgage payment</mat-label>
+            <input matInput formControlName="paymentFrequencyPeriod">
+        </mat-form-field>
+        <button mat-flat-button color="primary">Save</button>
+    </form>
+</div>

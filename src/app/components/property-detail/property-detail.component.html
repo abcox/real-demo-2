@@ -1,0 +1,68 @@
+<div class="container m-3">
+    <h1>Property Detail</h1>
+    <div *ngIf="property() as property; else notFoundTemplate">
+        <div class="card">
+            <div class="card-header">
+                <h2>{{ property.askingPrice | currency }}</h2>
+                <h3>
+                    <app-address [address]="property.address">
+                    </app-address>
+                </h3>
+            </div>
+            <div class="images">
+                <img [src]="property.imageUrl" alt="Property Image">
+            </div>
+            <div class="card-body mt-2 mb-3">
+                <!-- <p>{{ property?.description }}</p> -->
+                <app-attribute-chip-list [attributes]="property.roomCounts">
+                </app-attribute-chip-list>
+            </div>
+            <mat-accordion multi displayMode="default">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Mortgage Calculator
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <app-mortgage-calculator [price]="property.askingPrice">
+                    </app-mortgage-calculator>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Realtor Engagement
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <!-- <div>
+                        <form formGroup="realtorForm">
+                            <mat-form-field>
+                                <mat-label>Realtor Name</mat-label>
+                                <input matInput formControlName="realtorName">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Realtor Phone</mat-label>
+                                <input matInput formControlName="realtorPhone">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Realtor Email</mat-label>
+                                <input matInput formControlName="realtorEmail">
+                            </mat-form-field>
+                            <button mat-flat-button color="primary">Save</button>
+                        </form>
+                    </div> -->
+                </mat-expansion-panel>
+            </mat-accordion>
+            <button mat-flat-button class="mt-5" color="primary" routerLink="/properties">
+                Back to Properties
+            </button>
+        </div>
+    </div>
+</div>
+<ng-template #notFoundTemplate>
+    <div class="card not-found flex flex-col min-h-screen">
+        <h1>Property Not Found</h1>
+        <button mat-flat-button class="mt-5" color="primary" routerLink="/">
+            Back to Properties
+        </button>
+    </div>
+</ng-template>
